@@ -3,7 +3,7 @@ const getInput = () => {
     const input = document.getElementById('input-field');
     const inputValue = input.value;
     input.value = '';
-    const url = `http://openlibrary.org/search.json?q=${inputValue}`;
+    const url = `https://openlibrary.org/search.json?q=${inputValue}`;
     fetch(url)
         .then(res => res.json())
         .then(data => displaySearchResult(data.docs));
